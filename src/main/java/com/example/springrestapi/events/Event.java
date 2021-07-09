@@ -42,7 +42,7 @@ public class Event {
     private EventStatus eventStatus = EventStatus.DRAFT;
 
 
-    /*
+
     public void update() {
         // Update free
         if(this.basePrice == 0 && this.maxPrice == 0) {
@@ -58,9 +58,6 @@ public class Event {
             this.offline = true;
         }
     }
-
-     */
-
 
 
 }
