@@ -1,5 +1,4 @@
-련package com.example.springrestapi.common;
-
+package com.example.springrestapi.common;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.JsonSerializer;
