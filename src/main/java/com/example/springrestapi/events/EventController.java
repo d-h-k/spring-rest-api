@@ -1,6 +1,9 @@
 package com.example.springrestapi.events;
 
+import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.hateoas.MediaTypes;
@@ -18,21 +21,24 @@ import java.net.URI;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 
 @Controller
+@RequiredArgsConstructor
 @RequestMapping(value = "/api/events", produces = MediaTypes.HAL_JSON_VALUE)
 public class EventController {
 
-    @Autowired
     EventRepository eventRepository;
 
-    @Autowired
     ModelMapper modelMapper;
 
-    @Autowired
     EventValidator eventValidator;
+
+    Logger logger;
+
 
 
     @PostMapping
-    public ResponseEntity createEvent(@RequestBody @Valid EventDto eventDto, Errors errors) {
+    public ResponseEntity<?> createEvent(@RequestBody @Valid EventDto eventDto, Errors errors) {
+        logger.debug("muyaho");
+
         if(errors.hasErrors()) {
             return ResponseEntity.badRequest().body(errors);
         }
