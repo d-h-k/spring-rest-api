@@ -23,6 +23,7 @@ import java.time.LocalDateTime;
 @EqualsAndHashCode(of = "id")
 public class Event {
 
+
     @Id
     @GeneratedValue
     private Integer id;

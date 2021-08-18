@@ -1,0 +1,7 @@
+
+###
+
+GET http://localhost:8080/api/events/dto_only
+
+###
+GET http://localhost:8080/api/events/with_response

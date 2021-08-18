@@ -19,6 +19,11 @@ import javax.validation.constraints.NotNull;
 @Data
 public class EventDto {
 
+    public EventDto(String name) {
+        this.name = name;
+    }
+
+    private Long id;
     @NotEmpty
     private String name;
     @NotEmpty
